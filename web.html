@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuan-Ting (Andrew) Chen - 個人網站</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .section-title {
+            font-size: 1.5rem; /* 24px */
+            font-weight: 700;
+            color: #1e293b; /* slate-800 */
+            margin-bottom: 1.5rem; /* 24px */
+            padding-bottom: 0.5rem; /* 8px */
+            border-bottom: 2px solid #334155; /* slate-700 */
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem; /* 12px */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .tag {
+            display: inline-block;
+            background-color: #e2e8f0; /* slate-200 */
+            color: #334155; /* slate-700 */
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem; /* 14px */
+            font-weight: 500;
+            margin: 0.25rem;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #cbd5e1; /* slate-300 */
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            padding-bottom: 2rem;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: calc(1rem - 0.5rem + 1px);
+            top: 0.25rem;
+            height: 1rem;
+            width: 1rem;
+            background-color: white;
+            border: 2px solid #334155; /* slate-700 */
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="text-slate-600">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto max-w-5xl px-6 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-bold text-slate-800">Kuan-Ting (Andrew) Chen</h1>
+                <p class="text-slate-500">Software Engineer, Computer Vision</p>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#education" class="hover:text-sky-600 transition-colors">Education</a>
+                <a href="#skills" class="hover:text-sky-600 transition-colors">Skills</a>
+                <a href="#experience" class="hover:text-sky-600 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-sky-600 transition-colors">Projects</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto max-w-5xl p-6">
+        
+        <!-- Contact Info -->
+        <section class="mb-12">
+            <div class="flex flex-wrap gap-4 md:gap-8 justify-center text-center">
+                <a href="tel:+886-900-185-363" class="flex items-center space-x-2 text-slate-700 hover:text-sky-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <span>+886-900-185-363</span>
+                </a>
+                <a href="mailto:853ujm@gmail.com" class="flex items-center space-x-2 text-slate-700 hover:text-sky-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span>853ujm@gmail.com</span>
+                </a>
+                <a href="https://github.com/sapt36" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 text-slate-700 hover:text-sky-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <span>Github: sapt36</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="mb-12">
+            <h2 class="section-title">Education</h2>
+            <div class="space-y-6">
+                <div class="card p-6">
+                    <p class="text-slate-500">Sep. 2024 ~ Present</p>
+                    <h3 class="text-xl font-semibold text-slate-800 mt-1">National Taiwan University (NTU)</h3>
+                    <p class="text-lg text-slate-700">M.S. at Biomechatronics Engineering</p>
+                    <p class="mt-2 text-slate-500">GPA: 4.15 / 4.3</p>
+                    <p class="mt-1 text-slate-500">Research: 3D Reconstruction using Depth Camera (D435i) for Plant Phenotyping</p>
+                </div>
+                <div class="card p-6">
+                    <p class="text-slate-500">Sep. 2020 ~ June 2024</p>
+                    <h3 class="text-xl font-semibold text-slate-800 mt-1">University of Taipei (UT)</h3>
+                    <p class="text-lg text-slate-700">B.S. at Computer Science</p>
+                    <p class="mt-2 text-slate-500">GPA: 3.5 / 4.0</p>
+                    <p class="mt-1 text-slate-500">Relevant Courses: Practice of Java Programming(A+), Algorithms(A+), Data Structure(A), Database System (A), Calculus(A)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="mb-12">
+            <h2 class="section-title">Skills</h2>
+            <div class="card p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h3 class="font-semibold text-lg text-slate-800 mb-2">Programming Languages</h3>
+                        <div class="flex flex-wrap">
+                            <span class="tag">Java</span><span class="tag">Python</span><span class="tag">C/C++</span><span class="tag">Html/JS/Css</span><span class="tag">Assembly</span><span class="tag">Dart</span><span class="tag">PHP</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-slate-800 mb-2">Software/Tools</h3>
+                        <div class="flex flex-wrap">
+                             <span class="tag">Git/Github</span><span class="tag">CI/CD</span><span class="tag">JIRA</span><span class="tag">Docker</span><span class="tag">PostgreSQL</span><span class="tag">SQLAlchemy</span><span class="tag">Postman</span><span class="tag">AWS S3</span><span class="tag">VMware</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-slate-800 mb-2">Framework/Libraries</h3>
+                        <div class="flex flex-wrap">
+                            <span class="tag">Spring Boot</span><span class="tag">MVC</span><span class="tag">REST</span><span class="tag">JPA</span><span class="tag">Flask</span><span class="tag">Flutter</span><span class="tag">OpenCV</span><span class="tag">Matplotlib</span><span class="tag">PyQt5</span><span class="tag">Pipenv</span><span class="tag">PyTorch</span>
+                        </div>
+                    </div>
+                     <div>
+                        <h3 class="font-semibold text-lg text-slate-800 mb-2">3D/Mechatronics</h3>
+                        <div class="flex flex-wrap">
+                            <span class="tag">SLAM</span><span class="tag">SfM</span><span class="tag">RealVNC</span><span class="tag">Linux</span><span class="tag">Arduino</span><span class="tag">MobaXterm</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-slate-800 mb-2">English Certification</h3>
+                        <div class="flex flex-wrap">
+                            <span class="tag">TOEIC: 835</span><span class="tag">IELTS: 6.0 (CEFR B2)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="mb-12">
+            <h2 class="section-title">Experience</h2>
+            <div class="relative timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <p class="text-slate-500">Mar. 2025 ~ Present</p>
+                    <h3 class="text-xl font-semibold text-slate-800 mt-1">Leaderg Software Technology Co., Ltd.</h3>
+                    <p class="text-lg text-slate-700">Python, PHP - AI Software Engineer Intern</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1 text-slate-600">
+                        <li>Conduct research on the latest developments in the field of AI, ex: Vision Transformer, XGBoost.</li>
+                        <li>Help the company writing the instructional materials with Python example code, ex: OpenAI API, Docker, CURL.</li>
+                        <li>Implement i18n system via PHP: Creat centralized text constant files enabling real-time language switching across website.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <p class="text-slate-500">Jul. 2024 ~ Sep. 2024</p>
+                    <h3 class="text-xl font-semibold text-slate-800 mt-1">KKday Holding Co., Ltd.</h3>
+                    <p class="text-lg text-slate-700">Java - Backend Software Engineer Intern</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1 text-slate-600">
+                        <li>Develop a library system to familiar with the software environment (Docker, Postman UI, IntelliJ, MacOS, RabbitMQ).</li>
+                        <li>Participate in the company's internal email system development by using JIRA to implement the Scrum process.</li>
+                        <li>Design database schema, API documents and use Git & Github to collaborate with other interns on 24 mailing API.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="mb-12">
+            <h2 class="section-title">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card p-6">
+                    <p class="text-slate-500 text-sm">Mar. 2025 — Mar. 2025</p>
+                    <h3 class="text-lg font-semibold text-slate-800 mt-1">High Dynamic Range Imaging Using Multi-Exposure Techniques</h3>
+                    <p class="text-sm font-medium text-sky-600 mt-1">Python - Digital Visual Effect Project @NTU CSIE</p>
+                    <ul class="list-disc list-inside mt-2 text-sm space-y-1">
+                        <li>Demonstrate a HDR imaging pipeline using 13 multi-exposure images.</li>
+                        <li>Implement MTB alignment and 3 different Tone Mapping methods to produce images with 34% enhanced detail.</li>
+                    </ul>
+                    <a href="#" class="inline-block mt-4 bg-slate-200 text-slate-700 px-3 py-1 rounded-full text-sm font-semibold hover:bg-slate-300 transition-colors">Project Link</a>
+                </div>
+                <div class="card p-6">
+                    <p class="text-slate-500 text-sm">Oct. 2024 — Nov. 2024</p>
+                    <h3 class="text-lg font-semibold text-slate-800 mt-1">Plant Disease Classification Using CNNs</h3>
+                    <p class="text-sm font-medium text-sky-600 mt-1">Python – Digital Image Processing Project @NTU BME</p>
+                    <ul class="list-disc list-inside mt-2 text-sm space-y-1">
+                        <li>Operate on a labeled dataset of 1472 images categorized into 3 conditions.</li>
+                        <li>Improve model performance through fine-tuning and data augmentation to achieve a valid accuracy of 0.9833.</li>
+                    </ul>
+                    <a href="#" class="inline-block mt-4 bg-slate-200 text-slate-700 px-3 py-1 rounded-full text-sm font-semibold hover:bg-slate-300 transition-colors">Project Link</a>
+                </div>
+                <div class="card p-6">
+                    <p class="text-slate-500 text-sm">Jul. 2024 ~ Jul. 2024</p>
+                    <h3 class="text-lg font-semibold text-slate-800 mt-1">Integrated Backend Framework for Service-Oriented Library System</h3>
+                    <p class="text-sm font-medium text-sky-600 mt-1">Java - Backend System Project @KKday</p>
+                    <ul class="list-disc list-inside mt-2 text-sm space-y-1">
+                        <li>Build RESTful APIs with Spring Boot & PostgreSQL, delivering 12 endpoints.</li>
+                        <li>Implement systems using a layered structure (Controller, Facade, Service, Database).</li>
+                    </ul>
+                    <a href="#" class="inline-block mt-4 bg-slate-200 text-slate-700 px-3 py-1 rounded-full text-sm font-semibold hover:bg-slate-300 transition-colors">Project Link</a>
+                </div>
+                <div class="card p-6">
+                    <p class="text-slate-500 text-sm">May. 2022 ~ May. 2022</p>
+                    <h3 class="text-lg font-semibold text-slate-800 mt-1">Dynamic Web to Present Sorting Algorithm with Quiz</h3>
+                    <p class="text-sm font-medium text-sky-600 mt-1">Html/JS/Css - Frontend Website Project @UT CS</p>
+                    <ul class="list-disc list-inside mt-2 text-sm space-y-1">
+                        <li>Apply Bootstrap and React.js to build 8 dynamic sorting algorithm visualizations.</li>
+                        <li>Implement client-side data storage for quiz results using local storage.</li>
+                    </ul>
+                    <a href="#" class="inline-block mt-4 bg-slate-200 text-slate-700 px-3 py-1 rounded-full text-sm font-semibold hover:bg-slate-300 transition-colors">Project Link</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Experience -->
+        <section id="additional-experience">
+            <h2 class="section-title">Additional Experience</h2>
+            <div class="card p-6">
+                <ul class="list-disc list-inside space-y-3 text-slate-700">
+                    <li><b>Department Webmaster:</b> Responsible for maintaining the Department of Biomechantronics Engineering website.</li>
+                    <li><b>Laboratory Webmaster:</b> Create and maintain our lab website - Bio-Optomechatronics Laboratory (Google Site).</li>
+                    <li><b>Competition Award:</b> 2024 North District Programming Competition-Advanced Group (Certificate of Merit).</li>
+                    <li><b>Hackathon Award:</b> Runalyze - Analyze your run : 2025 PhysTech 1st place (Project Page – Grand Prix Winner).</li>
+                    <li><b>Teaching Assistant:</b> Courses of Mechatronics and System Design (IV) (National Taiwan University).</li>
+                    <li><b>Teaching Experience:</b> 4 years of experience teaching Math, Programming and English as a tutor and teacher.</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-400 mt-12">
+        <div class="container mx-auto max-w-5xl p-6 text-center">
+            <p>&copy; 2025 Kuan-Ting (Andrew) Chen. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
